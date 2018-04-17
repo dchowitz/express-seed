@@ -1,0 +1,39 @@
+{
+  "name": "express-seed",
+  "version": "1.0.0",
+  "description": "express starter",
+  "main": "index.js",
+  "author": "dchowitz",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "tsc --watch & nodemon dist",
+    "build": "",
+    "deploy": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.2.1",
+    "jwks-rsa": "^1.2.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/jsonwebtoken": "^7.2.6",
+    "@types/passport": "^0.4.4",
+    "@types/passport-jwt": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.17.3",
+    "prettier-eslint": "^8.8.1",
+    "typescript": "^2.7.2"
+  }
+}
