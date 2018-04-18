@@ -5,7 +5,7 @@ import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt'
 
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-  secretOrKey: 'foobar'
+  secretOrKey: process.env.JWT_SECRET
 }
 
 // TODO: use real DB
