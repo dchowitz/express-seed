@@ -7,7 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "tsc --watch & nodemon dist",
+    "dev":
+      "concurrently --kill-others \"docker-compose -f docker-compose.dev.yml up\" \"tsc --watch\" \"REDIS_PORT=6379 REDIS_HOST=localhost export $(cat .env | xargs) && nodemon dist\"",
     "build": "tsc",
     "deploy": "./deploy.sh"
   },
@@ -28,6 +29,8 @@
     "@types/passport": "^0.4.4",
     "@types/passport-jwt": "^3.0.1",
     "@types/redis": "^2.8.6",
+    "@types/request": "^2.47.0",
+    "concurrently": "^3.5.1",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",

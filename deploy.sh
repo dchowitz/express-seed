@@ -17,8 +17,7 @@ echo "going to deploy to $dockerHost"
 dockerEnv="$(docker-machine env $dockerHost)"
 eval $dockerEnv
 
-docker-compose build
-docker-compose up -d
+docker-compose up -d --build
 
 # unset docker host
 eval $(docker-machine env -u)

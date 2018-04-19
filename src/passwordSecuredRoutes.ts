@@ -19,6 +19,29 @@ export default function passwordSecuredRoutes (): express.Router {
   const router = express.Router()
   router.use(authenticationHandler())
 
+  router.get('/', (req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+    res.write(`<!DOCTYPE html><pre>
+This showcases authentication with username and password via passport.
+
+Routes:
+
+POST ${req.baseUrl}/login
+Payload: something like
+{
+	"name": "foo",
+	"pwd": "test1"
+}
+Looks up a user and verifies the correct password. Then creates an access token
+with which the secured routes can be accessed.
+
+GET ${req.baseUrl}/secret
+Represents an endpoint which requires authentication in form of a bearer token.
+
+</pre>`)
+    res.end()
+  })
+
   router.post('/login', (req, res) => {
     const { name, pwd } = req.body
     // TODO: use real DB to look up user
