@@ -7,13 +7,15 @@ A simple, opinionated project seed for http APIs based on Node.js and Express fe
 * Docker deployment (docker-compose)
 * redis persistence
 
-- small smoke test
-
 * showcase automatic tests (unit, integration)
 
-* process manager (auto-restart, mailing in case of incidents?)
-* Some useful [VS Code](https://code.visualstudio.com/) settings and extension recommendations.
-* what about helmet?! (adds some header attributes)
+- small smoke test
+
+* maybe a minimal frontend for better demo
+
+- process manager (auto-restart, mailing in case of incidents?)
+- Some useful [VS Code](https://code.visualstudio.com/) settings and extension recommendations.
+- what about helmet?! (adds some header attributes)
 
 ### License
 

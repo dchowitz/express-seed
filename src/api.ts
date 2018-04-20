@@ -37,6 +37,10 @@ for authenticated routes.
     res.end()
   })
 
+  app.get('/count', async (_, res) => {
+    res.json({ count: await counter() })
+  })
+
   app.use('/password-auth', passwordSecuredRoutes())
   app.use('/auth0-auth', auth0SecuredRoutes())
 
